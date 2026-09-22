@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="initializeGallery()">
+
+    <header>
+        <h1>Accessible Interactive Photo Gallery</h1>
+        <p>Use your mouse to hover over an image or use the <strong>Tab</strong> key on your keyboard to navigate through the gallery.</p>
+    </header>
+
+    <main>
+        <!-- Khung hiển thị ảnh phóng to -->
+        <div id="image" aria-live="polite">
+            Hover over an image below or use Tab to display here.
+        </div>
+
+        <section aria-label="Image Thumbnails">
+            <h2>Gallery Thumbnails</h2>
+            <div class="gallery">
+                <img class="preview" 
+                     alt="Sunflower field glowing under the warm sunset" 
+                     src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&auto=format&fit=crop&q=80" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()"
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+
+                <img class="preview" 
+                     alt="Snow-covered mountain peak touching the clear blue sky" 
+                     src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&auto=format&fit=crop&q=80" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()"
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+
+                <img class="preview" 
+                     alt="Tropical beach with turquoise clear ocean waves and white sand" 
+                     src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=80" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()"
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+
+                <img class="preview" 
+                     alt="Dense autumn forest filled with vibrant red and golden trees" 
+                     src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&auto=format&fit=crop&q=80" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()"
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+
+                <img class="preview" 
+                     alt="Misty scenic lake with a small wooden pier at dawn" 
+                     src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=80" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()"
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+
+                <img class="preview" 
+                     alt="Picturesque desert landscape with sweeping red sand dunes" 
+                     src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&auto=format&fit=crop&q=80" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="unDo()"
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+            </div>
+        </section>
+    </main>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
